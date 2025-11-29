@@ -4,7 +4,7 @@
              x:Class="lgavidias6.Views.VistaEstudiante"
              Title="Vista de Estudiantes">
 
-    <VerticalStackLayout Padding="20" Spacing="20">
+    <VerticalStackLayout Padding="25" Spacing="25">
 
         <Label Text="Gestión de Estudiantes"
                FontSize="26"
