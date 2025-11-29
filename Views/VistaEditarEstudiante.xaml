@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lgavidias6.Views.VistaEditarEstudiante"
+             Title="Editar Estudiante">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Entry x:Name="txtCodigo" IsEnabled="False"/>
+        <Entry x:Name="txtNombre" Placeholder="Nombre"/>
+        <Entry x:Name="txtApellido" Placeholder="Apellido"/>
+        <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric"/>
+
+        <Button Text="Actualizar"
+                BackgroundColor="Orange"
+                TextColor="White"
+                Clicked="btnActualizar_Clicked"/>
+
+        <Button Text="Eliminar"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="btnEliminar_Clicked"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
