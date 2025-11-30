@@ -1,4 +1,4 @@
-using System.Net.Http;
+﻿using System.Net.Http;
 using lgavidias6.Models;
 using Newtonsoft.Json;
 
@@ -12,7 +12,6 @@ public partial class VistaEstudiante : ContentPage
     public VistaEstudiante()
     {
         InitializeComponent();
-        // No esperes en el constructor, solo dispara la carga
         _ = Mostrar();
     }
 
@@ -28,7 +27,6 @@ public partial class VistaEstudiante : ContentPage
         {
             var json = await cliente.GetStringAsync(URL);
             var lista = JsonConvert.DeserializeObject<List<Estudiante>>(json);
-
             lvEstudiantes.ItemsSource = lista;
         }
         catch (Exception ex)
@@ -50,3 +48,5 @@ public partial class VistaEstudiante : ContentPage
         }
     }
 }
+
+

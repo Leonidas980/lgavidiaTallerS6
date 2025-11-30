@@ -6,14 +6,27 @@
 
     <VerticalStackLayout Padding="20" Spacing="15">
 
-        <Entry x:Name="txtNombre" Placeholder="Nombre" />
-        <Entry x:Name="txtApellido" Placeholder="Apellido" />
-        <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric"/>
+        <Label Text="Agregar Estudiante"
+               FontSize="24"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+
+        <Entry x:Name="txtNombre"
+               Placeholder="Nombre"/>
+
+        <Entry x:Name="txtApellido"
+               Placeholder="Apellido"/>
+
+        <Entry x:Name="txtEdad"
+               Placeholder="Edad"
+               Keyboard="Numeric"/>
 
         <Button Text="Guardar"
                 BackgroundColor="Green"
                 TextColor="White"
                 Clicked="btnGuardar_Clicked"/>
-    </VerticalStackLayout>
 
+    </VerticalStackLayout>
 </ContentPage>
+
+

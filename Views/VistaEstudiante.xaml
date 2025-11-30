@@ -13,6 +13,7 @@
                FontAttributes="Bold"
                TextColor="#0D47A1"/>
 
+        <!-- ESTE ES EL ÚNICO BOTÓN -->
         <Button Text="➕ Agregar Estudiante"
                 BackgroundColor="#1565C0"
                 TextColor="White"
@@ -20,7 +21,7 @@
                 Padding="10"
                 FontAttributes="Bold"
                 Clicked="btnAgregar_Clicked"/>
-
+        
         <!-- ENCABEZADO -->
         <Grid ColumnDefinitions="*,*,*,*" 
               BackgroundColor="#004D40" 

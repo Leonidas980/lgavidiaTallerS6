@@ -5,13 +5,13 @@ namespace lgavidias6.Views;
 
 public partial class VistaEditarEstudiante : ContentPage
 {
-    Estudiante _est;
-    string URL = "http://10.2.3.103:8080/moviles/westudiante.php";
+    private Estudiante estudiante;
+    private const string URL = "http://localhost:8080/moviles/wsestudiante.php";
 
     public VistaEditarEstudiante(Estudiante est)
     {
         InitializeComponent();
-        _est = est;
+        estudiante = est;
 
         txtCodigo.Text = est.codigo.ToString();
         txtNombre.Text = est.nombre;
@@ -22,7 +22,7 @@ public partial class VistaEditarEstudiante : ContentPage
     private async void btnActualizar_Clicked(object sender, EventArgs e)
     {
         string urlPut =
-            $"{URL}?codigo={_est.codigo}&nombre={txtNombre.Text}&apellido={txtApellido.Text}&edad={txtEdad.Text}";
+            $"{URL}?codigo={estudiante.codigo}&nombre={txtNombre.Text}&apellido={txtApellido.Text}&edad={txtEdad.Text}";
 
         var request = new HttpRequestMessage(HttpMethod.Put, urlPut);
         await new HttpClient().SendAsync(request);
@@ -36,7 +36,7 @@ public partial class VistaEditarEstudiante : ContentPage
         bool confirm = await DisplayAlert("Confirmar", "¿Eliminar estudiante?", "Sí", "No");
         if (!confirm) return;
 
-        string urlDelete = $"{URL}?codigo={_est.codigo}";
+        string urlDelete = $"{URL}?codigo={estudiante.codigo}";
 
         var request = new HttpRequestMessage(HttpMethod.Delete, urlDelete);
         await new HttpClient().SendAsync(request);
@@ -45,3 +45,4 @@ public partial class VistaEditarEstudiante : ContentPage
         await Navigation.PopAsync();
     }
 }
+
